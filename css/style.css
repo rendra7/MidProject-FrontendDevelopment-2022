@@ -1,0 +1,291 @@
+:root {
+    --primary: #a5eaff;
+    --bg : #010101; 
+    --line : #ce5050; 
+    --white : #fff; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body 
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+    min-height: 4000px;
+}
+
+/* Navbar */
+
+.navbar 
+{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(62, 62, 62, 0.744);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo
+{
+    font-size: 2rem;
+    font-weight: 650;
+    color: #bc3d3d;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span
+{
+    color : #fff;
+}
+
+.navbar .navbar-nav a
+{
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover
+{
+    color: #ce5050;
+}
+
+.navbar .navbar-nav a::after 
+{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--line);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after 
+{
+    transform: scaleX(0.5);
+}
+
+/* HOME SECTION */
+.hero
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../HOME.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after 
+{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(225, 225, 225, 0) 50%);
+}
+
+.hero .content 
+{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1
+{
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0,5);
+    line-height: 1;
+}
+
+
+.hero .content h1 span
+{
+    color: var(--line);
+    font-style: italic;
+}
+
+
+.hero .content h1 span span
+{
+    color: var(--white);
+    font-style: italic;
+}
+
+
+.hero .content p 
+{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0,5);
+}
+
+
+.hero .content .cta
+{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    color: #ffff;
+    background-color:  rgba(62, 62, 62, 0.744);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0,5);
+}
+
+
+/* LOGIN AND REGISTRATION SECTION */
+.login-d
+{
+    padding: 6rem;
+    color: #ffff;
+    box-sizing: border-box;
+
+    background-image: url('../PX.jpg');
+    min-height: 100vh;
+    /* display: flex; */
+    /* align-items: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.login-d h9 
+{
+    font-size: 4rem;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.login-d h9 span
+{
+    font-size: 2rem;
+    color: #bc3d3d;
+    font-style: italic;
+}
+
+
+
+
+/* ABOUT US SECTION */
+.about
+{
+    min-height: 100vh;
+    padding: 6rem 7% 0.5rem;
+}
+
+.about h2
+{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span
+{
+    color: var(--line);
+}
+
+.about .row .about-img
+{
+    left:2rem;
+    right:2rem;
+}
+
+.about .row .about-img img
+{
+    width: 100%;
+}
+
+.about .row .content
+{
+    padding: 0 1rem;  
+}
+
+.menu h2
+{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu
+{
+    min-height: 100vh;
+    padding: 6rem 7% 1rem;
+}
+
+.menu h2 span
+{
+    color:#bc3d3d;
+}
+
+/* COURSE MENU SECTION */
+
+.menu p
+{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+}
+
+.menu .arrow
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.menu .arrow .menu-card-title
+{
+    margin-top: 1rem auto 0.5rem;
+}
+
+
+.menu-card
+{
+    text-align:center;
+}
+
+.menu .row .menu-card img
+{
+    border-radius: 50%;
+    width: 80%;
+}
+
+.hero2
+{
+    min-height: 100vh;
+    padding: 6rem 7% 0.5rem;
+}
+
+.hero2 h3 span
+{
+    color :#bc3d3d;
+}
